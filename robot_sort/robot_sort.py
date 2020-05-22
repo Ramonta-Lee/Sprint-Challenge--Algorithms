@@ -98,6 +98,7 @@ class SortingRobot:
         """
         while True:
             self.set_light_off()
+
             while self.can_move_right():
                 self.swap_item()
                 self.move_right()
@@ -107,8 +108,10 @@ class SortingRobot:
                 self.move_left()
                 self.swap_item()
                 self.move_right()
-            if not self.light_is_on():
-                break
+            if  not self.light_is_on():
+               break
+
+            # Allows me to move left
             while self.can_move_left():
                 self.move_left()
 
