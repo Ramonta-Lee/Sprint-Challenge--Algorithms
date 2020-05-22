@@ -15,7 +15,7 @@ c) O(n)
 Given a building n tall
 how to determine when the egg did not break??
 drop an egg from bottom level  up until the egg breaks
-the previous floor is floor is the highest the egg can be dropped without breaking
+the previous floor is the highest the egg can be dropped without breaking
 
 The runtime is O(n) 
 
