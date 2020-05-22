@@ -97,21 +97,29 @@ class SortingRobot:
         Sort the robot's list.
         """
         while True:
+            # sets light to off at start of each iteration
             self.set_light_off()
 
             while self.can_move_right():
+                # pickup item
                 self.swap_item()
                 self.move_right()
+                # move right once and then compare value
                 if self.compare_item() == 1:
                     self.swap_item()
                     self.set_light_on()
+
                 self.move_left()
                 self.swap_item()
-                self.move_right()
+                self.move_right()  
+                
+            # this breaks the while loop
+            # the light is off and no swaps ocurred
             if  not self.light_is_on():
                break
 
-            # Allows me to move left
+            # Allows me to move left 
+            # this resets the first while loop
             while self.can_move_left():
                 self.move_left()
 
